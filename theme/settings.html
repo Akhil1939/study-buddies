@@ -34,13 +34,13 @@
         </form>
         <nav class="header__menu">
           <!-- Not Logged In -->
-          <a href="/login.html">
+          <!-- <a href="/login.html">
             <img src="./assets/avatar.svg" />
             <p>Account</p>
-          </a>
+          </a> -->
 
           <!-- Logged In -->
-          <!-- <a href="#">
+          <a href="#">
             <div class="avatar avatar--medium active">
               <img src="https://randomuser.me/api/portraits/men/37.jpg" />
             </div>
@@ -55,37 +55,16 @@
               <title>chevron-down</title>
               <path d="M16 21l-13-13h-3l16 16 16-16h-3l-13 13z"></path>
             </svg>
-          </a> -->
+          </a>
         </nav>
       </div>
     </header>
-    <main class="auth layout">
+    <main class="create-room layout">
       <div class="container">
         <div class="layout__box">
           <div class="layout__boxHeader">
             <div class="layout__boxTitle">
-              <h3>Login</h3>
-            </div>
-          </div>
-          <div class="layout__body">
-            <h2 class="auth__tagline">Find your study partner</h2>
-
-            <form class="form" action="#">
-              <div class="form__group form__group">
-                <label for="room_name">Username</label>
-                <input id="username" name="username" type="text" placeholder="e.g. dennis_ivy" />
-              </div>
-              <div class="form__group">
-                <label for="password">Password</label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"
-                />
-              </div>
-
-              <button class="btn btn--main" type="submit">
+              <a href="index.html">
                 <svg
                   version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -93,26 +72,72 @@
                   height="32"
                   viewBox="0 0 32 32"
                 >
-                  <title>lock</title>
+                  <title>arrow-left</title>
                   <path
-                    d="M27 12h-1v-2c0-5.514-4.486-10-10-10s-10 4.486-10 10v2h-1c-0.553 0-1 0.447-1 1v18c0 0.553 0.447 1 1 1h22c0.553 0 1-0.447 1-1v-18c0-0.553-0.447-1-1-1zM8 10c0-4.411 3.589-8 8-8s8 3.589 8 8v2h-16v-2zM26 30h-20v-16h20v16z"
-                  ></path>
-                  <path
-                    d="M15 21.694v4.306h2v-4.306c0.587-0.348 1-0.961 1-1.694 0-1.105-0.895-2-2-2s-2 0.895-2 2c0 0.732 0.413 1.345 1 1.694z"
+                    d="M13.723 2.286l-13.723 13.714 13.719 13.714 1.616-1.611-10.96-10.96h27.625v-2.286h-27.625l10.965-10.965-1.616-1.607z"
                   ></path>
                 </svg>
-
-                Login
-              </button>
-            </form>
-
-            <div class="auth__action">
-              <p>Haven't signed up yet?</p>
-              <a href="signup.html" class="btn btn--link">Sign Up</a>
+              </a>
+              <h3>Settings</h3>
             </div>
+          </div>
+
+          <div class="settings layout__body">
+            <div class="settings__avatar">
+              <div class="avatar avatar--large active">
+                <img src="assets/avatar.svg" id="preview-avatar" />
+              </div>
+            </div>
+            <form class="form" action="#">
+              <div class="form__group form__avatar">
+                <label for="avatar">Upload Avatar</label>
+                <input
+                  class="form__hide"
+                  required
+                  type="file"
+                  name="avatar"
+                  id="avatar"
+                  accept="image/png, image/gif, image/jpeg"
+                />
+              </div>
+              <div class="form__group">
+                <label for="name">Full Name</label>
+                <input
+                  id="fullname"
+                  name="fullname"
+                  type="text"
+                  placeholder="e.g. Dennis Ivy"
+                  value="Dennis Ivy"
+                />
+              </div>
+              <div class="form__group">
+                <label for="username">Username</label>
+                <input
+                  id="username"
+                  name="username"
+                  type="text"
+                  placeholder="e.g. @dennis_ivy"
+                  value="@dennis_ivy"
+                />
+              </div>
+              <div class="form__group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="e.g. user@domain.com" />
+              </div>
+              <div class="form__group">
+                <label for="about">About</label>
+                <textarea name="about" id="about" placeholder="Write about yourself..."></textarea>
+              </div>
+              <div class="form__action">
+                <a class="btn btn--dark" href="profile.html">Cancel</a>
+                <button class="btn btn--main" type="submit">Update Settings</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
